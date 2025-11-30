@@ -249,47 +249,34 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
 .contact-cards{display:flex;gap:12px;flex-wrap:wrap}
 .contact-card{background:var(--card-bg);padding:12px;border-radius:10px;min-width:160px;box-shadow:var(--shadow)}
 
-/* ===========================
-   NEW FOOTER LAYOUT (FINAL)
-   =========================== */
-
+/* --- FOOTER LAYOUT --- */
 .site-footer {
   background: #0A0A0A;
-  color: #C7C7C7;
   padding: 50px 0 20px;
+  color: #C7C7C7;
   border-top: 1px solid rgba(255,255,255,0.06);
 }
 
-/* Main footer layout container */
+/* Top footer grid */
 .footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 0 16px;
+  align-items: flex-start;
 }
 
-/* Column flex behavior */
-.footer-brand,
-.footer-links,
-.footer-contact {
-  flex: 1 1 220px;
-}
-
-/* Brand/logo */
+/* Logo + tagline */
 .footer-brand img {
   width: 90px;
   border-radius: 10px;
 }
+
 .footer-brand .tagline {
-  margin-top: 12px;
-  font-size: 0.95rem;
-  opacity: 0.85;
+  margin-top: 10px;
+  color: #9B9B9B;
 }
 
-/* Headings */
+/* Column titles */
 .footer-links h4,
 .footer-contact h4 {
   color: #8FAB36;
@@ -297,56 +284,68 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
   font-size: 1.1rem;
 }
 
-/* Links */
-.footer-links a,
-.footer-contact a {
+/* Quick links */
+.footer-links a {
   display: block;
   color: #C7C7C7;
-  text-decoration: none;
-  margin: 6px 0;
-  transition: 0.2s ease;
+  margin: 5px 0;
+  transition: 0.2s;
 }
-.footer-links a:hover,
-.footer-contact a:hover {
+.footer-links a:hover {
   color: #8FAB36;
   margin-left: 4px;
 }
 
-/* Bottom centered row */
+/* Contact links */
+.footer-contact a {
+  color: #C7C7C7;
+  transition: 0.2s;
+}
+.footer-contact a:hover {
+  color: #8FAB36;
+}
+
+/* Middle row (Home • Services • About • Contact • tagline) */
 .footer-row {
   margin-top: 40px;
-  padding-top: 20px;
-  text-align: center;
+  padding-top: 25px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
-  color: #C7C7C7;
-  opacity: 0.9;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
+
 .footer-row a {
   color: #C7C7C7;
   text-decoration: none;
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 .footer-row a:hover {
   color: #8FAB36;
 }
 
-/* Copyright strip */
+/* Bottom copyright strip */
 .footer-bottom {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
   text-align: center;
-  margin-top: 12px;
   color: #9B9B9B;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
-/* Mobile fix */
-@media (max-width: 680px) {
-  .footer-content {
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .footer-row {
     flex-direction: column;
+    gap: 10px;
     text-align: center;
-    align-items: center;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
   }
 }
 
