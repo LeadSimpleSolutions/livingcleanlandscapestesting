@@ -239,7 +239,7 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
 .t-prev,.t-next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) !important;
   background: linear-gradient(180deg,
     rgba(143,171,54,0.25) 0%,
     rgba(143,171,54,0.18) 60%,
@@ -267,10 +267,10 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
   border-color: rgba(143,171,54,0.55) !important;
   color: #A5C64A !important;
 
-  transform: translateY(-1px);   /* slight lift instead of jumping */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.38) !important;
+  transform: translateY(-1px) !important; /* ONLY slight upward movement */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.32) !important;
 
-  transition: all 0.22s ease !important;
+  transition: all 0.18s ease !important;
 }
 
 
