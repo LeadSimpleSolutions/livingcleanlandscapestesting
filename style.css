@@ -206,7 +206,26 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
 .t-viewport{overflow:hidden;width:100%;position:relative}
 .t-viewport .testimonial-track{display:flex;transition:transform 0.5s ease;width:100%}
 .t-viewport .testimonial-track blockquote{width:100%;flex-shrink:0;background:var(--card-bg);padding:28px 22px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;text-align:center;max-width:640px;margin-left:auto;margin-right:auto}
-.t-prev,.t-next{position:absolute;top:50%;transform:translateY(-50%);background:var(--brand);color:#fff;border:none;padding:10px 14px;border-radius:50%;cursor:pointer;font-size:20px;opacity:0.95;z-index:20;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+.t-prev,.t-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(180deg,
+    rgba(143,171,54,0.25) 0%,
+    rgba(143,171,54,0.18) 60%,
+    rgba(0,0,0,0.55) 100%
+  ) !important;
+  color: #8FAB36 !important;
+  border: 1px solid rgba(143,171,54,0.45) !important;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.95;
+  z-index: 20;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  backdrop-filter: blur(4px);
+}
 .t-prev{left:18px}
 .t-next{right:18px}
 
