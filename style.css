@@ -58,6 +58,24 @@
   backdrop-filter: blur(4px);
 }
 
+/* BUTTON HOVER EFFECT */
+.btn-primary:hover {
+  background: linear-gradient(180deg,
+    rgba(143,171,54,0.35) 0%,
+    rgba(143,171,54,0.25) 55%,
+    rgba(0,0,0,0.65) 100%
+  ) !important;
+
+  border-color: rgba(143,171,54,0.60) !important;
+  color: #A5C64A !important; /* slightly brighter green text */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.45) !important;
+}
+
+/* Smooth animation */
+.btn-primary {
+  transition: all 0.22s ease !important;
+}
 
 
 /* Header */
