@@ -380,35 +380,4 @@ html,body{max-width:100%;overflow-x:hidden}
   justify-content: center; /* horizontal */
   align-items: center;     /* vertical */
 }
-/* Center footer links & align items in a clean row */
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
 
-.footer-links a {
-  display: block;
-}
-
-/* Create a clean centered row of footer info */
-.footer-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 20px;
-  color: #C7C7C7;
-  font-size: 0.95rem;
-}
-
-.footer-row a {
-  color: #FFFFFF;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.footer-row a:hover {
-  color: var(--brand);
-}
