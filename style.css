@@ -478,6 +478,7 @@ html,body{max-width:100%;overflow-x:hidden}
   }
 }
 .service-icon img {
+  filter: brightness(0) invert(1);
   width: 40px;      /* adjust size to match emoji */
   height: 40px;     /* maintain aspect ratio */
   display: block;   /* ensures it centers properly inside the parent div */
