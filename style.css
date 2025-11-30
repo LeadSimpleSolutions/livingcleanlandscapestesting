@@ -341,14 +341,7 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
   display: flex;
   gap: 14px;
   justify-content: center;
-  margin-bottom: 22px;
-}
-
-.mini-cta-links {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  text-align: center;
+  margin-bottom: 1px;
 }
 
 .mini-cta-links a {
