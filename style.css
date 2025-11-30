@@ -263,14 +263,14 @@ html,body{max-width:100%;overflow-x:hidden}
 /* Move carousel arrows lower so they do NOT overlap text */
 .t-prev,
 .t-next {
-  top: 56% !important;   /* was 50% — moves them downward */
+  top: 50% !important;   /* was 50% — moves them downward */
 }
 
 /* Mobile: move them even lower */
 @media (max-width: 600px) {
   .t-prev,
   .t-next {
-    top: 60% !important;
+    top: 56% !important;
   }
 }
 /* --- FIX 1: Center testimonials on desktop again --- */
