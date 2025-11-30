@@ -1,0 +1,207 @@
+
+:root{
+  --brand: #8FAB36;
+  --accent: #FFC857;
+  --dark: #FFFFFF;
+  --muted: #C7C7C7;
+  --bg: #0A0A0A;
+  --card-bg: #141414;
+  --radius: 12px;
+  --wrap: 1100px;
+  --shadow: 0 8px 30px rgba(0,0,0,0.35);
+  --glass: rgba(255,255,255,0.08);
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+body{
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--dark);
+  line-height:1.55;
+}
+
+/* Layout wrapper */
+.wrap{width:92%;max-width:var(--wrap);margin:0 auto}
+
+/* HEADER */
+.site-header{
+  background:#0A0A0A;
+  border-bottom:1px solid rgba(0,40,60,0.06);
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter:blur(4px);
+}
+
+.header-grid{display:flex;align-items:center;gap:20px;padding:14px 0;max-width:100%;}
+.brand{display:flex;align-items:center;gap:14px;flex:0 1 auto}
+.brand-logo{width:96px;height:auto;border-radius:10px;object-fit:cover;box-shadow:var(--shadow);max-width:100%}
+.brand-text .brand-name{display:block;font-weight:800;color:var(--dark);font-size:1.05rem}
+.brand-text .brand-tag{display:block;color:var(--muted);font-size:0.85rem;margin-top:2px}
+
+.main-nav{margin-left:auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap;max-width:100%}
+.nav-link{font-weight:600;text-decoration:none;color:var(--dark);padding:8px 12px;border-radius:8px;transition:.18s;white-space:nowrap}
+.nav-link:hover{background:rgba(27,154,170,0.08);color:var(--brand)}
+.nav-link.cta{background:var(--brand);color:#fff;padding:9px 14px}
+.nav-link.cta:hover{opacity:.95}
+.nav-link.active{outline:2px solid rgba(27,154,170,0.18)}
+
+/* HERO */
+.hero{padding:44px 0;background: var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+.hero-content h1{font-size:2.05rem;margin:6px 0 12px;color:var(--dark);line-height:1.18}
+.lead{color:var(--muted);font-size:1.05rem;margin-bottom:18px}
+.hero-actions{display:flex;gap:12px;margin-bottom:16px}
+.btn{display:inline-block;text-decoration:none;border:none;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 20px rgba(27,154,170,0.18)}
+.btn-outline{background:transparent;border:1.5px solid rgba(0,40,60,0.08);color:var(--dark)}
+.trust-list{list-style:none;padding:0;margin:12px 0 0;display:flex;gap:16px;color:var(--muted);font-size:0.95rem}
+
+/* FORM CARD */
+.card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+.lead-form .card{}
+.muted{color:var(--muted);font-size:0.95rem}
+label{display:block;font-size:0.85rem;margin-top:10px;color:var(--muted)}
+input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08);border-radius:8px;margin-top:6px;font-size:0.95rem}
+.form-status{margin-top:10px;color:var(--muted);font-size:0.9rem}
+
+/* SECTIONS */
+.section-light{padding:48px 0}
+.section-dark{padding:48px 0;background:#2F3E46;color:#fff}
+.section-title{font-size:1.45rem;margin:0 0 8px;font-weight:800}
+.section-sub{color:var(--muted);margin-bottom:20px}
+
+/* SERVICE CARDS */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.service{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+.service h3{margin-top:0;color:var(--dark)}
+
+/* PORTFOLIO */
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+.portfolio-grid img{width:100%;height:220px;object-fit:cover;border-radius:10px;box-shadow:var(--shadow)}
+
+/* CTA */
+.cta-banner{background:var(--bg)}
+
+/* SERVICES PAGE */
+.service-list{display:grid;gap:22px;margin-top:22px}
+.service-row{display:flex;gap:18px;align-items:center;background:var(--card-bg);padding:16px;border-radius:12px;box-shadow:var(--shadow)}
+.service-row.reverse{flex-direction:row-reverse}
+.service-thumb{width:220px;height:140px;object-fit:cover;border-radius:10px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:start;margin-top:10px}
+.about-card{background:var(--card-bg);padding:22px;border-radius:12px;box-shadow:var(--shadow)}
+.rounded-img{width:100%;border-radius:12px;object-fit:cover;display:block}
+.small-card{background:var(--card-bg);padding:18px;border-radius:12px;margin-top:14px;box-shadow:var(--shadow)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:start}
+.contact-cards{display:flex;gap:12px;flex-wrap:wrap}
+.contact-card{background:var(--card-bg);padding:12px;border-radius:10px;min-width:160px;box-shadow:var(--shadow)}
+
+/* FOOTER */
+.site-footer{background:#0A0A0A;color:#FFFFFF;padding:28px 0;margin-top:36px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.brand-small{width:84px;border-radius:8px}
+
+/* TESTIMONIAL CAROUSEL */
+.testimonial-carousel{position:relative;max-width:700px;margin:0 auto;box-sizing:border-box;padding:0 40px;max-width:100%}
+.t-viewport{overflow:hidden;width:100%;position:relative}
+.t-viewport .testimonial-track{display:flex;transition:transform 0.5s ease;width:100%}
+.t-viewport .testimonial-track blockquote{width:100%;flex-shrink:0;background:var(--card-bg);padding:28px 22px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;text-align:center;max-width:640px;margin-left:auto;margin-right:auto}
+.t-prev,.t-next{position:absolute;top:50%;transform:translateY(-50%);background:var(--brand);color:#fff;border:none;padding:10px 14px;border-radius:50%;cursor:pointer;font-size:20px;opacity:0.95;z-index:20;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+.t-prev{left:18px}
+.t-next{right:18px}
+
+/* MODERN CARDS */
+.modern-services .service-card{background:var(--card-bg);padding:22px;border-radius:14px;box-shadow:var(--shadow);transition:.25s ease}
+.modern-services .service-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,40,60,0.12)}
+.service-icon{font-size:2.2rem;margin-bottom:14px;color:var(--brand)}
+
+/* GLOBAL SAFETY RULES: prevents horizontal overflow globally */
+html,body{max-width:100%;overflow-x:hidden}
+
+/* RESPONSIVE */
+@media (max-width: 820px){
+  html,body{overflow-x:hidden}
+  .wrap{width:100%;max-width:100%;padding:0 12px}
+  .header-grid{flex-wrap:wrap;gap:12px}
+  .main-nav{width:100%;justify-content:center;gap:10px}
+  .hero-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr!important;gap:22px;margin-top:12px}
+  .about-grid>aside{order:-1}
+  .about-card,.small-card{padding:22px}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;text-align:center}
+  .testimonial-carousel{padding:0 20px}
+  .t-prev{left:12px}
+  .t-next{right:12px}
+}
+
+@media (max-width: 600px){
+  .brand-logo{width:70px}
+  .testimonial-carousel{padding:0 10px}
+  .t-prev,.t-next{left:8px;right:8px}
+  .t-prev,.t-next{padding:8px 10px;font-size:18px}
+}
+/* Move carousel arrows lower so they do NOT overlap text */
+.t-prev,
+.t-next {
+  top: 60% !important;   /* was 50% — moves them downward */
+}
+
+/* Mobile: move them even lower */
+@media (max-width: 600px) {
+  .t-prev,
+  .t-next {
+    top: 65% !important;
+  }
+}
+/* --- FIX 1: Center testimonials on desktop again --- */
+.testimonial-carousel {
+  max-width: 700px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.t-viewport .testimonial-track blockquote {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* --- FIX 2: Proper mobile arrow alignment (no more giant merged arrow) --- */
+@media (max-width: 600px) {
+  .t-prev {
+    left: 10px !important;
+    right: auto !important;
+  }
+
+  .t-next {
+    right: 10px !important;
+    left: auto !important;
+  }
+
+  /* Optional: keep arrows safely below the text */
+  .t-prev,
+  .t-next {
+    top: 58% !important;
+  }
+}
+.service-icon img {
+  width: 40px;      /* adjust size to match emoji */
+  height: 40px;     /* maintain aspect ratio */
+  display: block;   /* ensures it centers properly inside the parent div */
+  margin: 0 auto;   /* center horizontally */
+}
+.service-icon {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+}
