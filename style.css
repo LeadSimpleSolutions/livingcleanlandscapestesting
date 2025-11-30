@@ -126,7 +126,19 @@ body{
 .main-nav{margin-left:auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap;max-width:100%}
 .nav-link{font-weight:600;text-decoration:none;color:var(--dark);padding:8px 12px;border-radius:8px;transition:.18s;white-space:nowrap}
 .nav-link:hover{background:rgba(27,154,170,0.08);color:var(--brand)}
-.nav-link.cta{background:var(--brand);color:#fff;padding:9px 14px}
+.nav-link.cta{
+  background: linear-gradient(180deg,
+    rgba(143,171,54,0.25) 0%,
+    rgba(143,171,54,0.18) 60%,
+    rgba(0,0,0,0.55) 100%
+  ) !important;
+
+  border: 1px solid rgba(143,171,54,0.45) !important;
+  color: #8FAB36 !important;
+  padding: 9px 14px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
 .nav-link.cta:hover{opacity:.95}
 .nav-link.active{outline:2px solid rgba(27,154,170,0.18)}
 
