@@ -53,7 +53,7 @@
   ) !important;
 
   border: 1px solid rgba(143,171,54,0.45) !important;
-  color: #d5e6a0 !important; /* lighter green text that stays readable */
+  color: #8FAB36 !important; /* lighter green text that stays readable */
   box-shadow: 0 6px 20px rgba(0,0,0,0.35) !important;
   backdrop-filter: blur(4px);
 }
