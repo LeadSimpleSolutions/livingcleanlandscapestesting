@@ -318,7 +318,7 @@ html,body{max-width:100%;overflow-x:hidden}
   /* Optional: keep arrows safely below the text */
   .t-prev,
   .t-next {
-    top: 58% !important;
+    top: 50% !important;
   }
 }
 .service-icon img {
