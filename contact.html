@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Professional Plumbing Services</title>
+  <meta name="description" content="Contact our plumbing experts for service calls, quotes, and emergency support.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="wrap header-grid">
+      <div class="brand">
+        <img src="assets/header.jpg" alt="Plumbing Company Logo" class="brand-logo">
+        <div class="brand-text">
+          <strong class="brand-name">Professional Plumbing Services</strong>
+          <span class="brand-tag">Your Local Experts for Every Pipe & Drain.</span>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link active cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-light wrap contact-grid">
+      <div>
+        <h1>Contact Us</h1>
+        <p>Need a plumber? Whether it's urgent or routine, we're here to help. Call, email, or send a message — our team responds quickly.</p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <h4>Phone</h4>
+            <p><a href="tel:5555555555" class="link-phone">(555) 555-5555</a></p>
+          </div>
+          <div class="contact-card">
+            <h4>Email</h4>
+            <p><a href="mailto:demo@example.com" class="link">demo@example.com</a></p>
+          </div>
+          <div class="contact-card">
+            <h4>Service Area</h4>
+            <p>Local & Surrounding Areas</p>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Send a Message</h3>
+
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="dcb2e950-571d-420d-9cc7-fb462047a864">
+
+            <label for="c-name">Name</label>
+            <input id="c-name" name="name" type="text" required>
+
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" required>
+
+            <label for="c-phone">Phone</label>
+            <input id="c-phone" name="phone" type="tel" required>
+
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="4" required></textarea>
+
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <p id="result" class="form-status" aria-live="polite"></p>
+          </form>
+
+          <script>
+            const form = document.getElementById('contactForm');
+            const result = document.getElementById('result');
+
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              const formData = new FormData(form);
+
+              result.textContent = "Sending…";
+
+              const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+              });
+
+              const data = await response.json();
+
+              if (data.success) {
+                result.textContent = "Thank you! Your message has been sent.";
+                form.reset();
+              } else {
+                result.textContent = "Something went wrong. Please try again.";
+              }
+            });
+          </script>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand"><img src="assets/header.jpg" alt="Small logo" class="brand-small"></div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-contact">
+        <p><a href="tel:5555555555" class="link-phone">(555) 555-5555</a></p>
+        <p><a href="mailto:demo@example.com" class="link">demo@example.com</a></p>
+        <p class="muted">© <span id="year"></span> Professional Plumbing Services</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+  (function(e,a,d,i,c,t=a.createElement(d)){e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},t.src=i,t.async=1,a.body.insertAdjacentElement("beforeend",t)})(window,document,"script","https://widget.quickchat.ai/chat.js","_quickchat");
+  _quickchat("host", "app.quickchat.ai");
+  _quickchat("init", "aaz5sl5sy2");
+</script>
+</body>
+</html>
