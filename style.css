@@ -157,7 +157,19 @@ body{
   backdrop-filter: blur(4px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.35);
 }
-.nav-link.cta:hover{opacity:.95}
+.nav-link.cta:hover{
+  background: linear-gradient(180deg,
+    rgba(143,171,54,0.30) 0%,
+    rgba(143,171,54,0.22) 55%,
+    rgba(0,0,0,0.60) 100%
+  ) !important;
+
+  border-color: rgba(143,171,54,0.55) !important;
+  color: #A5C64A !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.45) !important;
+  transition: all 0.22s ease !important;
+}
 .nav-link.active{outline:2px solid rgba(27,154,170,0.18)}
 
 /* HERO */
