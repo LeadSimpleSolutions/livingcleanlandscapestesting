@@ -249,7 +249,7 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
 .contact-cards{display:flex;gap:12px;flex-wrap:wrap}
 .contact-card{background:var(--card-bg);padding:12px;border-radius:10px;min-width:160px;box-shadow:var(--shadow)}
 
-/* --- SMALL FOOTER (with mobile) --- */
+//* --- SMALL FOOTER (with mobile) --- */
 .site-footer {
   background: #0A0A0A;
   padding: 25px 0 12px;
@@ -265,6 +265,12 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
   gap: 6px;
   text-align: center;
   margin-bottom: 18px;
+}
+
+/* Tighter line height improvement */
+.footer-stack a,
+.footer-stack p {
+  line-height: 1.3;
 }
 
 .footer-stack a {
@@ -287,13 +293,13 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
   font-size: 0.85rem;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;  /* Tighter spacing */
 }
 
 /* --- Mobile adjustments --- */
 @media (max-width: 600px) {
   .site-footer { 
-    padding: 20px 0 10px; 
+    padding: 20px 0 10px;   /* smaller height on mobile */
   }
 
   .footer-stack {
@@ -308,8 +314,6 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
     font-size: 0.82rem;
   }
 }
-
-
 
 /* TESTIMONIAL CAROUSEL */
 .testimonial-carousel{position:relative;max-width:700px;margin:0 auto;box-sizing:border-box;padding:0 40px;max-width:100%}
