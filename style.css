@@ -11,6 +11,75 @@
   --shadow: 0 8px 30px rgba(0,0,0,0.35);
   --glass: rgba(255,255,255,0.08);
 }
+/* --- POLISHED GRADIENTS --- */
+
+/* Hero background: subtle vertical polish on your black */
+.hero{
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,0.04) 0%,
+      rgba(255,255,255,0.00) 40%,
+      rgba(0,0,0,0.25) 100%
+    ),
+    var(--bg);
+}
+
+/* Cards: improved depth using glass layer + soft sheen */
+.card,
+.service,
+.about-card,
+.small-card,
+.contact-card,
+.service-row {
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,0.06) 0%,
+      rgba(255,255,255,0.02) 35%,
+      rgba(0,0,0,0.18) 100%
+    ),
+    var(--card-bg);
+}
+
+/* Buttons: brand → accent micro-blend for premium finish */
+.btn-primary{
+  background:
+    linear-gradient(90deg,
+      var(--brand) 0%,
+      color-mix(in srgb, var(--brand) 75%, var(--accent) 25%) 35%,
+      color-mix(in srgb, var(--brand) 55%, var(--accent) 45%) 65%,
+      var(--accent) 100%
+    );
+}
+
+/* Header bar: ultra-subtle gradient so it's not flat black */
+.site-header{
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,0.05) 0%,
+      rgba(0,0,0,0.30) 100%
+    ),
+    #0A0A0A;
+}
+
+/* Section-dark upgrade */
+.section-dark{
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,0.03) 0%,
+      rgba(0,0,0,0.45) 100%
+    ),
+    #2F3E46;
+}
+
+/* Footer polish – matches hero and header */
+.site-footer{
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,0.04) 0%,
+      rgba(0,0,0,0.35) 100%
+    ),
+    #0A0A0A;
+}
 
 *{box-sizing:border-box}
 html,body{
