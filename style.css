@@ -266,11 +266,6 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
 
   border-color: rgba(143,171,54,0.55) !important;
   color: #A5C64A !important;
-
-  transform: translateY(-1px) !important; /* ONLY slight upward movement */
-  box-shadow: 0 6px 14px rgba(0,0,0,0.32) !important;
-
-  transition: all 0.18s ease !important;
 }
 
 
