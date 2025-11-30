@@ -270,7 +270,7 @@ html,body{max-width:100%;overflow-x:hidden}
 @media (max-width: 600px) {
   .t-prev,
   .t-next {
-    top: 56% !important;
+    top: 50% !important;
   }
 }
 /* --- FIX 1: Center testimonials on desktop again --- */
