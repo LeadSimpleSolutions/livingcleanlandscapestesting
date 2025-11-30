@@ -317,7 +317,7 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
 /* --- MINI CTA SECTION ABOVE FOOTER --- */
 .mini-cta {
   text-align: center;
-  padding: 48px 0;
+  padding: 32px 0;
   color: #C7C7C7;
   background: #0A0A0A;
   border-top: 1px solid rgba(255,255,255,0.05);
