@@ -333,7 +333,7 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
 
 .mini-cta p {
   color: #9B9B9B;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 1rem;
 }
 
@@ -341,18 +341,7 @@ input,select,textarea{width:100%;padding:10px;border:1px solid rgba(0,40,60,0.08
   display: flex;
   gap: 14px;
   justify-content: center;
-  margin-bottom: 1px;
-}
-
-.mini-cta-links a {
-  color: #C7C7C7;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.mini-cta-links a:hover {
-  color: #8FAB36;
+  margin-bottom: 10px;
 }
 
 /* Mobile */
