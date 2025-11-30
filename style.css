@@ -11,74 +11,77 @@
   --shadow: 0 8px 30px rgba(0,0,0,0.35);
   --glass: rgba(255,255,255,0.08);
 }
-/* --- POLISHED GRADIENTS --- */
+/* --- POLISHED GRADIENTS — Strong Override (fallbacks + !important) --- */
 
-/* Hero background: subtle vertical polish on your black */
+/* Hero */
 .hero{
-  background:
+  background-image:
     linear-gradient(180deg,
       rgba(255,255,255,0.04) 0%,
       rgba(255,255,255,0.00) 40%,
-      rgba(0,0,0,0.25) 100%
-    ),
-    var(--bg);
+      rgba(0,0,0,0.25) 100%),
+    none !important;
+  background-color: var(--bg) !important;
+  background-blend-mode: normal !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
-/* Cards: improved depth using glass layer + soft sheen */
+/* Cards & panels */
 .card,
 .service,
 .about-card,
 .small-card,
 .contact-card,
 .service-row {
-  background:
+  background-image:
     linear-gradient(180deg,
       rgba(255,255,255,0.06) 0%,
       rgba(255,255,255,0.02) 35%,
-      rgba(0,0,0,0.18) 100%
-    ),
-    var(--card-bg);
+      rgba(0,0,0,0.18) 100%),
+    none !important;
+  background-color: var(--card-bg) !important;
+  background-blend-mode: normal !important;
 }
 
-/* Buttons: brand → accent micro-blend for premium finish */
+/* Primary buttons (no color-mix fallback) */
 .btn-primary{
-  background:
-    linear-gradient(90deg,
-      var(--brand) 0%,
-      color-mix(in srgb, var(--brand) 75%, var(--accent) 25%) 35%,
-      color-mix(in srgb, var(--brand) 55%, var(--accent) 45%) 65%,
-      var(--accent) 100%
-    );
+  background-image: linear-gradient(90deg,
+      rgba(143,171,54,1) 0%,
+      rgba(183,157,70,1) 40%,
+      rgba(255,200,87,1) 100%) !important;
+  background-color: var(--brand) !important;
+  color: #fff !important;
 }
 
-/* Header bar: ultra-subtle gradient so it's not flat black */
+/* Header */
 .site-header{
-  background:
+  background-image:
     linear-gradient(180deg,
       rgba(255,255,255,0.05) 0%,
-      rgba(0,0,0,0.30) 100%
-    ),
-    #0A0A0A;
+      rgba(0,0,0,0.30) 100%),
+    none !important;
+  background-color: #0A0A0A !important;
 }
 
-/* Section-dark upgrade */
+/* section-dark */
 .section-dark{
-  background:
+  background-image:
     linear-gradient(180deg,
       rgba(255,255,255,0.03) 0%,
-      rgba(0,0,0,0.45) 100%
-    ),
-    #2F3E46;
+      rgba(0,0,0,0.45) 100%),
+    none !important;
+  background-color: #2F3E46 !important;
 }
 
-/* Footer polish – matches hero and header */
+/* Footer */
 .site-footer{
-  background:
+  background-image:
     linear-gradient(180deg,
       rgba(255,255,255,0.04) 0%,
-      rgba(0,0,0,0.35) 100%
-    ),
-    #0A0A0A;
+      rgba(0,0,0,0.35) 100%),
+    none !important;
+  background-color: #0A0A0A !important;
 }
 
 *{box-sizing:border-box}
