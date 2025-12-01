@@ -481,6 +481,8 @@ html,body{max-width:100%;overflow-x:hidden}
   filter: brightness(0) invert(1);
   width: 40px;      /* adjust size to match emoji */
   height: 40px;     /* maintain aspect ratio */
+  object-fit: contain;   /* prevents stretching */
+  aspect-ratio: 1 / 1;   /* forces them to behave like perfect squares */
   display: block;   /* ensures it centers properly inside the parent div */
   margin: 0 auto;   /* center horizontally */
 }
