@@ -491,14 +491,26 @@ html,body{max-width:100%;overflow-x:hidden}
   justify-content: center; /* horizontal */
   align-items: center;     /* vertical */
 }
-.service-icon svg {
+/* Matching sizes + white color */
+.service-icon img {
   width: 40px;
   height: 40px;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
   display: block;
   margin: 0 auto;
+  filter: brightness(0) invert(1);
 }
 
-.service-icon {
-  color: #ffffff; /* makes the SVG white */
+/* FIX: Sprinkler icon alignment */
+.service-icon.sprinkler img {
+  object-position: 50% 38%; /* move up */
+  transform: translateY(-2px);
+}
+
+/* FIX: Weed abatement icon alignment */
+.service-icon.weed img {
+  object-position: 50% 62%; /* move down */
+  transform: translateY(1px);
 }
 
