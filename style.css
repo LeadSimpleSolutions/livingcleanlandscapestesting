@@ -504,16 +504,16 @@ html,body{max-width:100%;overflow-x:hidden}
 
 /* FIX: Sprinkler icon alignment */
 .service-icon.sprinkler img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-position: 50% 38%; /* move up */
   transform: translateY(-2px);
 }
 
 /* FIX: Weed abatement icon alignment */
 .service-icon.weed img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-position: 50% 62%; /* move down */
   transform: translateY(1px);
 }
