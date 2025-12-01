@@ -491,4 +491,14 @@ html,body{max-width:100%;overflow-x:hidden}
   justify-content: center; /* horizontal */
   align-items: center;     /* vertical */
 }
+.service-icon svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+.service-icon {
+  color: #ffffff; /* makes the SVG white */
+}
 
