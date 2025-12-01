@@ -477,44 +477,20 @@ html,body{max-width:100%;overflow-x:hidden}
     top: 50% !important;
   }
 }
-.service-icon img {
-  filter: brightness(0) invert(1);
-  width: 40px;      /* adjust size to match emoji */
-  height: 40px;     /* maintain aspect ratio */
-  object-fit: contain;   /* prevents stretching */
-  aspect-ratio: 1 / 1;   /* forces them to behave like perfect squares */
-  display: block;   /* ensures it centers properly inside the parent div */
-  margin: 0 auto;   /* center horizontally */
-}
 .service-icon {
+  width: 48px;          /* fixed box */
+  height: 48px;         /* square shape */
   display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertical */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 14px;
 }
-/* Matching sizes + white color */
+
 .service-icon img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  aspect-ratio: 1 / 1;
-  display: block;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* keeps shape without stretching */
   filter: brightness(0) invert(1);
 }
 
-/* FIX: Sprinkler icon alignment */
-.service-icon.sprinkler img {
-  width: 60px;
-  height: 60px;
-  object-position: 50% 38%; /* move up */
-  transform: translateY(-2px);
-}
-
-/* FIX: Weed abatement icon alignment */
-.service-icon.weed img {
-  width: 60px;
-  height: 60px;
-  object-position: 50% 62%; /* move down */
-  transform: translateY(1px);
-}
 
