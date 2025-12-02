@@ -514,22 +514,19 @@ html,body{max-width:100%;overflow-x:hidden}
 @media (max-width: 820px) {
   .service-row,
   .service-row.reverse {
-    flex-direction: column; /* stack vertically */
-    align-items: center;    /* center items horizontally */
-    text-align: center;     /* center text */
+    flex-direction: column;   /* stack image above text */
+    text-align: center;        /* center the text */
   }
 
   .service-thumb {
-    width: 80%;             /* let image shrink on mobile */
-    max-width: 220px;       /* don’t get too big */
-    height: auto;           /* maintain aspect ratio */
-    margin-bottom: 12px;    /* space below image */
+    width: auto;               /* let it shrink to fit image */
+    margin: 0 auto 12px auto;  /* center horizontally, add spacing below */
   }
 
   .service-thumb img {
-    width: 100%;
-    height: auto;           /* maintain aspect ratio */
-    object-fit: cover;
+    width: 100%;               /* fill the container */
+    max-width: 220px;          /* optional cap */
+    height: auto;              /* maintain aspect ratio */
     display: block;
   }
 }
