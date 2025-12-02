@@ -492,12 +492,22 @@ html,body{max-width:100%;overflow-x:hidden}
   object-fit: contain;  /* keeps shape without stretching */
   background-color: var(--brand);
 }
-/* FINAL OVERRIDE — MAKE ALL SERVICE THUMBS EXACTLY THE SAME SIZE */
+.service-row { align-items: flex-start !important; }
+
 .service-thumb {
-  width: 220px !important;
-  height: 160px !important;  /* change this number if you want taller */
-  object-fit: cover !important;
-  border-radius: 10px !important;
-  flex-shrink: 0 !important;
-  display: block !important;
+  width: 220px;
+  height: 160px;
+  flex: 0 0 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+  box-shadow: var(--shadow);
+  background: #111;
+}
+
+.service-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
