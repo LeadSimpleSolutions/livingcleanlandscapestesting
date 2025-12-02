@@ -514,19 +514,23 @@ html,body{max-width:100%;overflow-x:hidden}
 @media (max-width: 820px) {
   .service-row,
   .service-row.reverse {
-    flex-direction: column;   /* stack image above text */
-    text-align: center;        /* center the text */
+    display: flex;
+    flex-direction: column;   /* stack vertically */
+    align-items: center;      /* center all children */
+    text-align: center;       /* center text */
   }
 
   .service-thumb {
-    width: auto;               /* let it shrink to fit image */
-    margin: 0 auto 12px auto;  /* center horizontally, add spacing below */
+    width: 100%;              /* take full container width */
+    max-width: 220px;         /* prevent too wide */
+    margin: 0 0 12px 0;       /* spacing below */
   }
 
   .service-thumb img {
-    width: 100%;               /* fill the container */
-    max-width: 220px;          /* optional cap */
-    height: auto;              /* maintain aspect ratio */
+    width: 100%;              /* fill the container */
+    height: auto;
     display: block;
+    margin: 0 auto;           /* ensure centering */
+    object-fit: cover;
   }
 }
