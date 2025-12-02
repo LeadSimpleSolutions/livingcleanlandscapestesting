@@ -523,7 +523,7 @@ html,body{max-width:100%;overflow-x:hidden}
   .service-thumb {
     width: 100%;              /* take full container width */
     max-width: 220px;         /* prevent too wide */
-    margin: 0 0 12px 0;       /* spacing below */
+    margin: 0 auto 12px auto;       /* spacing below */
   }
 
   .service-thumb img {
