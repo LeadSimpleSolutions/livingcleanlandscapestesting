@@ -492,13 +492,12 @@ html,body{max-width:100%;overflow-x:hidden}
   object-fit: contain;  /* keeps shape without stretching */
   background-color: var(--brand);
 }
-/* FORCE ALL SERVICE IMAGES TO BE UNIFORM SIZE */
-.service-thumb img {
-  width: 100%;
-  height: 160px;         /* pick ANY height you want (140, 160, 180…) */
-  object-fit: cover;     /* fills the box without stretching */
-  border-radius: 10px;
-  display: block;
-  box-shadow: var(--shadow);
+/* FINAL OVERRIDE — MAKE ALL SERVICE THUMBS EXACTLY THE SAME SIZE */
+.service-thumb {
+  width: 220px !important;
+  height: 160px !important;  /* change this number if you want taller */
+  object-fit: cover !important;
+  border-radius: 10px !important;
+  flex-shrink: 0 !important;
+  display: block !important;
 }
-
