@@ -515,11 +515,21 @@ html,body{max-width:100%;overflow-x:hidden}
   .service-row,
   .service-row.reverse {
     flex-direction: column; /* stack vertically */
-    align-items: center;    /* center images horizontally */
-    text-align: center;     /* center the text */
+    align-items: center;    /* center items horizontally */
+    text-align: center;     /* center text */
   }
 
   .service-thumb {
-    margin-bottom: 12px;    /* spacing between image and text */
+    width: 80%;             /* let image shrink on mobile */
+    max-width: 220px;       /* don’t get too big */
+    height: auto;           /* maintain aspect ratio */
+    margin-bottom: 12px;    /* space below image */
+  }
+
+  .service-thumb img {
+    width: 100%;
+    height: auto;           /* maintain aspect ratio */
+    object-fit: cover;
+    display: block;
   }
 }
